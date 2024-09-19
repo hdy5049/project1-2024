@@ -14,17 +14,17 @@ function get_weather(){
    city = document.getElementById('city')
    cityname = city.value;
 
-  tformat = document.getElementById('tformat').value
-  tformat = tempformat.value
-   
+   tempformat = document.getElementById('tformat')
+   tformat = tempformat.value
 
-   alert(cityname, tformat)
+
+   console.log(cityname)
 
    weather_url = "https://api.openweathermap.org/data/2.5/find?"
-
-   appid = '&units=metric&appid=7d96bc5108f52b80e2d9075a369b9f35'
-  
-   final_url = weather_url + "q=" + cityname + "&units=" + tformat + appid 
+   
+   appid = '&appid=7d96bc5108f52b80e2d9075a369b9f35'
+   
+   final_url = weather_url + "q=" +cityname + "&units=" + tformat + appid
 
    axios.get(final_url)
    .then(function(response) {
@@ -32,7 +32,7 @@ function get_weather(){
       let wdata = response.data.list[0];
       let exdata = response.data.list[0].weather[0];
 
-      temp.innerText = wdata.main.temp + "°K";
+      temp.innerText = wdata.main.temp + "°C";
       min.innerText = wdata.main.temp_min;
       max.innerText = wdata.main.temp_max;
       wind.innerText = wdata.wind.speed;

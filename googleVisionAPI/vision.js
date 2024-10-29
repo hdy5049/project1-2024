@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 GOOGLEAPI_KEY = "AIzaSyCzGLuB8l2aqu_kwUyvsRFg3_HzTNnMvEw"
 CV_URL = 'https://vision.googleapis.com/v1/images:annotate?key=' + GOOGLEAPI_KEY;
+=======
+GOOGLEAPI_KEY = ""
+>>>>>>> 6ed0bd5e4c60191d927b730fad4dda31c557c6ad
 function processFile(event) {
     const content = event.target.result;
     imagestring = content.replace(/^data:image\/(jpeg|png);base64,/, '');  // JPEG 또는 PNG 형식의 이미지를 처리

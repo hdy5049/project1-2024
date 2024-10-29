@@ -48,3 +48,5 @@ git config --global user.email "hdy5049@naver.com"
 두번째 수정
 2024-9-19 깃허브연동실습
 로컬에서 편집함
+
+google API 키를 이용해서 인물 표정 변화를 감지함
